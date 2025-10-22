@@ -2,6 +2,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import connectMongo from './configs/mongo_db.config'
 import { connectSqldb } from './configs/sql_db.config'
+import ExternalArticle from './entity/content.entity'
 
 const app = express()
 
