@@ -1,9 +1,12 @@
 import express from 'express'
+import { EntityMetadata } from 'typeorm';
 import dotenv from 'dotenv'
 import connectMongo from './configs/mongo_db.config'
 import { connectSqldb } from './configs/sql_db.config'
 import ExternalArticle from './entity/content.entity'
+import 'reflect-metadata';
 
+dotenv.config()
 const app = express()
 
 const port = process.env.port || 3002
