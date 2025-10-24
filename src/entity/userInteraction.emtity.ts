@@ -1,8 +1,8 @@
-import { Entity, PrimaryGeneratedColumn, Column, Index } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, Index, BaseEntity } from 'typeorm';
 
 @Entity({ name: 'user_interactions' })
 @Index(['userId', 'articleId'], { unique: true }) // Prevents duplicate entries for the same user/article
-export class UserInteraction {
+export class UserInteraction extends BaseEntity{
   @PrimaryGeneratedColumn('uuid')
   id!: string;
 
