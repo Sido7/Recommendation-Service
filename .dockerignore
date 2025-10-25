@@ -1,0 +1,6 @@
+.env
+node_modeles/
+.gitignore
+dist/
+records/
+dockerfile

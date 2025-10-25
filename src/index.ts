@@ -10,11 +10,11 @@ import 'reflect-metadata';
 dotenv.config()
 const app = express()
 
-const port = process.env.port || 3002
+const port = process.env.port || 4001
 
-app.get('/health', async (req, res) => {
-    res.send("Recommendation Service is working fine")
-})
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
 
 app.use('/v1',articleRoutes)
 
